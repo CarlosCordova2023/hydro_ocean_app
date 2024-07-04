@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Observation Detail</title>
+</head>
+<body>
+    <h1>{{ observation.location }} on {{ observation.date }}</h1>
+    <p>Temperature: {{ observation.temperature }}</p>
+    <p>Salinity: {{ observation.salinity }}</p>
+    <a href="{% url 'observation_list' %}">Back to list</a>
+</body>
+</html>

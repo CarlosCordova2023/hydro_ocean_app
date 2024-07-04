@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Observations</title>
+</head>
+<body>
+    <h1>Observations</h1>
+    <a href="{% url 'observation_create' %}">Add new observation</a>
+    <ul>
+        {% for observation in observations %}
+            <li>
+                <a href="{% url 'observation_detail' observation.id %}">
+                    {{ observation.location }} on {{ observation.date }}
+                </a>
+                - <a href="{% url 'observation_update' observation.id %}">Edit</a>
+                - <a href="{% url 'observation_delete' observation.id %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
